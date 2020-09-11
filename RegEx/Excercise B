@@ -1,0 +1,15 @@
+import sys
+idx = int(sys.argv[1])-41
+myRegexList = [
+   r"/^[.ox]{64}$/i",
+   r"/^[ox]*\.[ox]*$/i",
+   r"/^xx*o*\.|\.o*x*x$|^\.|\.$/i",
+   r"/^.(..)*$/s",
+   r"/^(0|1[10])([10]{2})*$/",
+   r"/\w*(a[eiou]|e[aiou]|i[aeou]|o[aeiu]|u[aeio])\w*/i",
+   r"/^(0|10)*1*$/",
+   r"/^[bc]*[abc][bc]*$/",
+   r"/^([bc]|(a[bc]*){2})+$/",
+   r"/^((1[02]*){2})+$|^2(([02]*1){2})*[02]*$/"
+   ]
+print(myRegexList[idx])
